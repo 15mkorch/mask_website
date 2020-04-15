@@ -38,4 +38,3 @@ export default (req, res) => {
 }
 
 main().catch(console.error);
-;
