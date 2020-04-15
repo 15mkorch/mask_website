@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export default (req, res) => {
+export default async (req, res) => {
     console.log(req.body);
     let transporter = nodemailer.createTransport({
         host: "pop1.maximtech.com",
