@@ -16,7 +16,7 @@ export default async (req, res) => {
     let info = await transporter.sendMail({
         from: '"Test Email" <mary.korch@theglobalu.org>', // sender address
         to: "15mary@gmail.com", // list of receivers
-        subject: "GU Mask Operation✔", // Subject line
+        subject: "Global U Mask Operation✔", // Subject line
         text: `
             firstName: ${req.body.firstName}
             lastName:${req.body.lastName}
