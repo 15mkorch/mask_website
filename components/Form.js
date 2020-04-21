@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 
 export default function Form() {
-    useEffect(() => {
-        axios.post('/api/form', form)
-    })
 
     let [form, setForm] = useState({
         firstName: "",
@@ -18,15 +15,17 @@ export default function Form() {
     })
 
     const handleChange = (event) => {
-        const { name, value, type, checked } = event.target
-        type === "checkbox" ?
-            this.setState({
-                [name]: checked
-            })
-            :
-            this.setState({
-                [name]: value
-            })
+        const { name, value, type, checked } = event.target;
+        if (type == 'checkbox') {
+            setForm({ ...form, [name]: checked })
+        } else {
+            setForm({ ...form, [name]: value })
+        }
+    }
+
+    const submitForm = (e) => {
+        e.preventDefault();
+        axios.post('http://localhost:5000/api/forms', form)
     }
 
     return (
@@ -111,7 +110,7 @@ export default function Form() {
                     </label>
                     <br />
 
-                    <button className="button">Submit</button>
+                    <button className="button" onClick={(e) => submitForm(e)}>Submit</button>
                 </form>
                 <hr />
             </main>

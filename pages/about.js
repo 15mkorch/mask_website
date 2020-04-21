@@ -1,8 +1,10 @@
+import Navbar from '../components/Navbar';
 
 
 export default function About() {
     return (
         <>
+            <Navbar />
             <div className="mainAbout">
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,700&display=swap" rel="stylesheet"></link>
                 <h1>Meet the Partners</h1>
