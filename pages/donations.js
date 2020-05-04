@@ -1,3 +1,4 @@
+import Navbar from '../components/Navbar';
 
 
 export default function donations() {
@@ -5,7 +6,7 @@ export default function donations() {
 
     return (
         <div className="main">
-
+            <Navbar />
             <h1 id="list">WE ARE LOOKING FOR...</h1>
             <div className="container">
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,700&display=swap" rel="stylesheet"></link>

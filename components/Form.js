@@ -84,7 +84,7 @@ export default function Form() {
                             name="purchasingMask"
                             onChange={(e) => handleChange(e)}
                             checked={form.purchasingMask}
-                        />Purchase a mask?
+                        /><h4>Purchase a mask?</h4>
                     </label>
                     <br />
 
@@ -95,7 +95,7 @@ export default function Form() {
                             name="sewing"
                             onChange={(e) => handleChange(e)}
                             checked={form.sewing}
-                        />sewing?
+                        /><h4>sewing?</h4>
                     </label>
                     <br />
 
@@ -106,7 +106,7 @@ export default function Form() {
                             name="donatingMaterial"
                             onChange={(e) => handleChange(e)}
                             checked={form.donatingMaterial}
-                        /> Donating Material?
+                        /> <h4>Donating Material?</h4>
                     </label>
                     <br />
 
@@ -121,6 +121,7 @@ export default function Form() {
                 length: 100%;
                 display: inline-block;
                 text-align: center;
+                font-family: "Poppins";
                 }
                 .button
                  {
@@ -147,8 +148,13 @@ export default function Form() {
                     
                 }
                 .check {
-                    font-family: "Poppins"
-                    float: left;
+                    font-family: "Poppins";
+                    text-align: center;
+                    display: inline-block;
+                }
+                h4 {
+                    font-size: 20px;
+                    font-family: poppins;
                 }
             `}</style>
         </div>

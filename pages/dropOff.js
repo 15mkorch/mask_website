@@ -1,8 +1,10 @@
+import Navbar from '../components/Navbar';
 
 
 export default function dropOff() {
     return (
         <div className="main">
+            <Navbar />
             <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,700&display=swap" rel="stylesheet"></link>
             <h1>MATERIAL DROP OFF LOCATIONS</h1>
             <div className="element">
