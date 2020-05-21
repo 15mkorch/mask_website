@@ -1,9 +1,13 @@
 import Navbar from '../components/Navbar';
-
+import Head from 'next/head'
 
 export default function About() {
     return (
         <>
+            <Head>
+                <title>About GlobalU Mask Operation</title>
+                <meta name="description" content="Entreprenuers are problem solvers, and right now, there's a lot of problems in the world. Global U brings together driven student who are sold out for Jesus to work on projects that impact the world." />
+            </Head>
             <Navbar />
             <div className="mainAbout">
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,700&display=swap" rel="stylesheet"></link>

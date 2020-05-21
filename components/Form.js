@@ -84,7 +84,8 @@ export default function Form() {
                             name="purchasingMask"
                             onChange={(e) => handleChange(e)}
                             checked={form.purchasingMask}
-                        /><h4>Purchase a mask?</h4>
+                        />
+                        <span className="checkmark"></span><h4>Purchase a mask?</h4>
                     </label>
                     <br />
 
@@ -95,7 +96,7 @@ export default function Form() {
                             name="sewing"
                             onChange={(e) => handleChange(e)}
                             checked={form.sewing}
-                        /><h4>sewing?</h4>
+                        /><span className="checkmark"></span><h4>sewing?</h4>
                     </label>
                     <br />
 
@@ -106,7 +107,7 @@ export default function Form() {
                             name="donatingMaterial"
                             onChange={(e) => handleChange(e)}
                             checked={form.donatingMaterial}
-                        /> <h4>Donating Material?</h4>
+                        /><span className="checkmark"></span><h4>Donating Material?</h4>
                     </label>
                     <br />
 
@@ -141,20 +142,55 @@ export default function Form() {
                     box-sizing: border-box;
                 }
                 .checkbox {
-                    position: relative;
-                    height: 25px;
-                    width: 25px;
-                    background-color: #eee;
-                    
+                    opacity: 0;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
                 }
                 .check {
                     font-family: "Poppins";
-                    text-align: center;
+                    text-align: left;
                     display: inline-block;
+                    width: 30%;
+                    position: relative;
+                    padding-left: 40px;
+                    box-sizing: border-box;
                 }
                 h4 {
                     font-size: 20px;
                     font-family: poppins;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0;
+                }
+
+                .checkmark {
+                    background-color: #eee;
+                    height: 25px;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 25px;
+                }
+                .check input:checked ~ .checkmark {
+                    background-color: #9cd6d6;
+                }
+
+                .checkmark:after {
+                    color: #ffffff;
+                    content: "L";
+                    display: none;
+                    font-size: 20px;
+                    left: 9px;
+                    position: absolute;
+                    top: -4px;
+                    -webkit-transform: rotate(40deg) scale(-1, 1);
+                    -ms-transform: rotate(40deg) scale(-1, 1);
+                    transform: rotate(40deg) scale(-1, 1);
+                }
+
+                .check input:checked ~ .checkmark:after {
+                    display: block;
                 }
             `}</style>
         </div>
